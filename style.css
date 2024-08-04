@@ -52,14 +52,22 @@ input[type="number"] {
   
   display: grid;
   grid-template-columns: 1.375fr 1fr;
-  column-gap: 5rem;
-
-  background: white url('./assets/oculos.png') no-repeat bottom left;
-  background-size: auto 40%;
+  column-gap: 5rem;  
 
   position: relative;
   background-position: left bottom -40px;
 }
+
+.imagem-produto{
+  width: 50%;
+  margin: 10% 0 -30% 15%;
+}
+
+.imagem-controle {
+  margin: 10% 0 -50% 30%;
+  width: 60%;
+}
+
 
 .grafismo-azul {
   position: absolute;

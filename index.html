@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -25,11 +25,11 @@
       <form class="formulario">
         <label class="campo-grupo">
           <span class="texto-medio-azul">Produto</span>
-          <select class="produto-input" name="produto" id="produto">
-            <option value="Fone de ouvido - R$100">Fone de ouvido - R$100</option>
-            <option value="Celular - R$1400">Celular - R$1400</option>
-            <option value="Oculus VR - R$5000">Oculus VR - R$5000</option>
-            <option value="Controle VR - R$450">Controle VR - R$450</option>
+          <select class="produto-input" id="produto" onchange="trocarProduto()">
+            <option value="fone">Fone de ouvido - R$100</option>
+            <option value="celular">Celular - R$1400</option>
+            <option value="oculos">Oculus VR - R$5000</option>
+            <option value="controle">Controle VR - R$450</option>
           </select>
           </div>
         </label>
@@ -45,6 +45,9 @@
             <button onclick="limpar()" type="button" class="botao-form botao-limpar">Limpar</button>
           </section>
         </section>
+        <div class="imagem" id="imagem-produto">
+          <img class="imagem-produto" src="./assets/fone.png" alt="imagem fone">
+        </div>
       </form>
     </section>
     <section class="carrinho">
@@ -63,7 +66,6 @@
       </section>
 
       <div class="divisoria"></div>
-
       <p class="carrinho__total">
         Total: <span class="texto-azul" id="valor-total">R$1400</span>
       </p>
