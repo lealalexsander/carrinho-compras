@@ -70,3 +70,22 @@ function atualizarValorTotal() {
     let valorFinal = document.getElementsByClassName('carrinho__total')[0];
     valorFinal.innerHTML = `Total: <span class="texto-azul" id="valor-total">R$${valorTotal}</span>`;
 }
+
+function limpar() {
+    let listaProdutos = document.getElementById('lista-produtos');
+    
+
+    produtosCarrinho.forEach((item) => {
+        let produtoHTML = `<section class="carrinho__produtos__produto">
+          <span class="texto-azul"></span> Carrinho vazio... <span class="texto-azul"></span>
+        </section>`;
+        listaProdutos.innerHTML = produtoHTML;        
+    });
+
+    valorTotal = 0;
+    let valorFinal = document.getElementsByClassName('carrinho__total')[0];
+    valorFinal.innerHTML = `Total: <span class="texto-azul" id="valor-total">R$0</span>`;
+
+    produtosCarrinho = [];
+    carrinho = [];
+}
