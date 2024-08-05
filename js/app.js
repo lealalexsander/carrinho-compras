@@ -13,7 +13,7 @@ function trocarProduto(){
     let produto = document.getElementById('imagem-produto');
     
     if (id == 'fone') {
-        produto.innerHTML = '<img class="imagem-produto" src="./assets/fone.png" alt="imagem fone">';
+        produto.innerHTML = '<img class="imagem-produto imagem-fone" src="./assets/fone.png" alt="imagem fone">';
     } else if(id == 'celular'){
         produto.innerHTML = '<img class="imagem-produto" src="./assets/celular.png" alt="imagem fone">';
     } else if(id == 'controle'){
