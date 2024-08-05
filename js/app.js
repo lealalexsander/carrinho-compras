@@ -1,9 +1,11 @@
 let carrinho = [];
+let produtosCarrinho = [];
 let valorTotal = 0;
 const celular = 1400;
 const controleVR = 450;
 const oculosVR = 5000;
 const fone = 100;
+let totalProduto = 0;
 
 function trocarProduto(){
     let select = document.getElementById('produto');
@@ -23,30 +25,48 @@ function trocarProduto(){
 
 function adicionar(){
     let produtoSelecionado = document.getElementById('produto').value;
-    carrinho.push(produtoSelecionado);
-    quantidadeProdutos = document.getElementById('quantidade').value;
-    
-    if (quantidadeProdutos == 1) {
-        if (produtoSelecionado == 'fone'){
-            valorTotal += fone;
-        } else if (produtoSelecionado == 'controle') {
-            valorTotal += controleVR;
-        } else if (produtoSelecionado == 'celular') {
-            valorTotal += celular;
-        } else if (produtoSelecionado == 'oculos') {
-            valorTotal += oculosVR;
-        }
-    } else if (quantidadeProdutos > 1){
-        if (produtoSelecionado == 'fone'){
-            valorTotal += fone * quantidadeProdutos;
-        } else if (produtoSelecionado == 'controle') {
-            valorTotal += controleVR * quantidadeProdutos;
-        } else if (produtoSelecionado == 'celular') {
-            valorTotal += celular * quantidadeProdutos;
-        } else if (produtoSelecionado == 'oculos') {
-            valorTotal += oculosVR * quantidadeProdutos;
-        } 
+    let quantidadeProdutos = parseInt(document.getElementById('quantidade').value);
+
+    let itemCarrinho = {
+        nome: produtoSelecionado,
+        quantidade: quantidadeProdutos,
+        preco: 0
+    };
+
+    if (produtoSelecionado == 'fone'){
+        itemCarrinho.preco = fone;
+    } else if (produtoSelecionado == 'controle') {
+        itemCarrinho.preco = controleVR;
+    } else if (produtoSelecionado == 'celular') {
+        itemCarrinho.preco = celular;
+    } else if (produtoSelecionado == 'oculos') {
+        itemCarrinho.preco = oculosVR;
     }
+
+    totalProduto += itemCarrinho.preco * quantidadeProdutos;
+    produtosCarrinho.push(itemCarrinho);
+    carrinho.push(produtoSelecionado);
+
+    valorTotal += itemCarrinho.preco * quantidadeProdutos;
+    atualizarListaProdutos();
+    atualizarValorTotal();
+}
+
+function atualizarListaProdutos() {
+    let listaProdutos = document.getElementById('lista-produtos');
+    listaProdutos.innerHTML = ''; // Limpa a lista antes de atualizar
+
+    produtosCarrinho.forEach((item) => {
+        let produtoHTML = `
+            <section class="carrinho__produtos__produto">
+                <span class="texto-azul">${item.quantidade}x</span> ${item.nome} <span class="texto-azul">R$${item.quantidade * item.preco}</span>
+            </section>
+        `;
+        listaProdutos.innerHTML += produtoHTML;
+    });
+}
+
+function atualizarValorTotal() {
     let valorFinal = document.getElementsByClassName('carrinho__total')[0];
     valorFinal.innerHTML = `Total: <span class="texto-azul" id="valor-total">R$${valorTotal}</span>`;
 }
