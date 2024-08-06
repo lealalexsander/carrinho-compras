@@ -251,7 +251,15 @@ input[type="number"] {
   padding-bottom: 180px;
 }
 
+.botao-limpar-maxwidth {
+  display: none;
+}
+
 @media screen and (max-width: 480px) {
+  body{
+    padding: 0;
+  }
+  
   .conteudo-principal {
     filter: none;
     display: flex;
@@ -329,5 +337,8 @@ input[type="number"] {
     justify-content: left;
     align-items: center;
   }
-
+  
+  .botao-limpar-maxwidth {
+    display: block;
+  }
 }
