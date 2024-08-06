@@ -273,6 +273,7 @@ input[type="number"] {
 
   .produto-input{
     font-size: 1em;
+    width: 20rem;
   }
 
   .imagem {
@@ -306,7 +307,7 @@ input[type="number"] {
     align-items: center;
     justify-content: center;
     padding-bottom: 0px;
-    padding: 0 1em 0 3em;
+    padding: 0 1em 0 1em;
   }
 
   .imagem-carrinho{
