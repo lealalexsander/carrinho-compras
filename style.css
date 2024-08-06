@@ -273,7 +273,7 @@ input[type="number"] {
 
   .produto-input{
     font-size: 1em;
-    width: 20rem;
+    width: 22rem;
   }
 
   .imagem {
@@ -287,9 +287,9 @@ input[type="number"] {
   }
 
   .botao-form {
-    width: 8rem;
+    width: 7rem;
     height: 3rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     gap: 0.625rem;
     border-radius: 1rem;
     cursor: pointer;
@@ -310,6 +310,10 @@ input[type="number"] {
     padding: 0 1em 0 1em;
   }
 
+  .carrinho {
+    padding: 0 1em 0 1em;
+  }
+
   .imagem-carrinho{
     display: none;
   }
@@ -324,4 +328,5 @@ input[type="number"] {
     justify-content: left;
     align-items: center;
   }
+
 }
