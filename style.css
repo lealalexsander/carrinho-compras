@@ -255,7 +255,13 @@ input[type="number"] {
   .conteudo-principal {
     display: flex;
     flex-direction: column;
-    
-    
+       
   }
+
+  
+  .imagem-produto, .imagem-controle, .imagem-fone {
+    width: 100%;
+    margin: 10% auto;
+  }
+}
 }
