@@ -31,7 +31,6 @@
             <option value="oculos">Oculus VR - R$5000</option>
             <option value="controle">Controle VR - R$450</option>
           </select>
-          </div>
         </label>
 
         <section class="parte-inferior">
@@ -51,7 +50,7 @@
       </form>
     </section>
     <section class="carrinho">
-      <img src="./assets/carrinho-cinza.svg" alt="Imagem de um carrinho de compras cinza">
+      <img class="imagem-carrinho" src="./assets/carrinho-cinza.svg" alt="Imagem de um carrinho de compras cinza">
 
       <div class="titulo-wrapper">
         <img src="./assets/icone-carrinho.svg" alt="ícone de carrinho">
@@ -66,9 +65,12 @@
       </section>
 
       <div class="divisoria"></div>
-      <p class="carrinho__total">
-        Total: <span class="texto-azul" id="valor-total">R$0</span>
-      </p>
+      <div class="totalProdutos">
+        <p class="carrinho__total">
+          Total: <span class="texto-azul" id="valor-total">R$0</span>
+        </p>
+        <button onclick="limpar()" type="button" class="botao-form botao-limpar">Limpar</button>
+      </div>
     </section>
   </main>
 

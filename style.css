@@ -256,16 +256,23 @@ input[type="number"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-       
   }
 
   .titulo {
-    font-size: 3em;
+    font-size: 2em;
     margin-top: 3em;
   }
 
   .botoes-wrapper {
     flex-wrap: wrap;
+  }
+
+  .texto-medio-azul {
+    font-size: 1em;
+  }
+
+  .produto-input{
+    font-size: 1em;
   }
 
   .imagem {
@@ -274,7 +281,46 @@ input[type="number"] {
   }
   
   .imagem-produto, .imagem-controle, .imagem-fone {
-    width: 100%;
+    width: 60%;
     margin: 10% auto;
+  }
+
+  .botao-form {
+    width: 8rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    gap: 0.625rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+
+  .quantidade-input {
+    font-size: 1rem;
+    height: 3rem;
+    width: 4rem;
+  }
+
+  .adicionar-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0px;
+    padding: 0 1em 0 3em;
+  }
+
+  .imagem-carrinho{
+    display: none;
+  }
+
+  .carrinho__total {
+    font-size: 1.7rem;
+  }
+
+  .totalProdutos {
+    display: flex;
+    gap: 1em;
+    justify-content: left;
+    align-items: center;
   }
 }
