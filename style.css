@@ -250,3 +250,12 @@ input[type="number"] {
 .adicionar-produto {
   padding-bottom: 180px;
 }
+
+@media screen and (max-width: 480px) {
+  .conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    
+    
+  }
+}
